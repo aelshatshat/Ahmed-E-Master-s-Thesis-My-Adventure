@@ -1,0 +1,233 @@
+[gd_scene load_steps=30 format=3 uid="uid://dwgrdc8fkfrg3"]
+
+[ext_resource type="Script" uid="uid://blmds36hs5ur" path="res://scenes/levels/CameraSettings.gd" id="8_2j1xo"]
+[ext_resource type="Texture2D" uid="uid://c8avowqfrq57n" path="res://sprites/stages/celestial_primates_domain.png" id="13_pcadl"]
+[ext_resource type="Resource" uid="uid://155m0ppfapil" path="res://bosses/celestial_primate/Attacks/LightningBolt/LightningBolt.tres" id="14_rpagb"]
+[ext_resource type="PackedScene" uid="uid://dqv85empdmgkb" path="res://bosses/celestial_primate/CelestialPrimate.tscn" id="15_omux8"]
+[ext_resource type="Resource" uid="uid://c6n32hemiebis" path="res://bosses/celestial_primate/Shared/Movement/TeleportMovement.tres" id="16_dl20d"]
+[ext_resource type="Script" uid="uid://bengg53ys06pk" path="res://bosses/celestial_primate/Shared/Movement/BossAnchor.gd" id="17_dl20d"]
+[ext_resource type="Resource" uid="uid://b8blsgf1an8rv" path="res://bosses/celestial_primate/Shared/Movement/GlideMovement.tres" id="17_i828f"]
+[ext_resource type="Script" uid="uid://wl3phbnmfy8t" path="res://bosses/celestial_primate/Shared/Movement/MovementTransition.gd" id="18_i828f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0amvw"]
+size = Vector2(2470, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j1xo"]
+size = Vector2(94, 1272.5)
+
+[sub_resource type="Resource" id="Resource_dl20d"]
+script = ExtResource("18_i828f")
+movement_type = "ArcGlide"
+target_anchor_name = "AnchorLeftBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_xlk7u"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorRightBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_fy50r"]
+script = ExtResource("18_i828f")
+movement_type = "ArcGlide"
+target_anchor_name = "AnchorRightTop"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_l32dp"]
+script = ExtResource("18_i828f")
+movement_type = "ArcGlide"
+target_anchor_name = "AnchorRightTop"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_df2hd"]
+script = ExtResource("18_i828f")
+movement_type = "ArcGlide"
+target_anchor_name = "AnchorCenter"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_j1pyc"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorMidRight"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_jfovg"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorLeftBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_2j1xo"]
+script = ExtResource("18_i828f")
+movement_type = "ArcGlide"
+target_anchor_name = "AnchorLeftTop"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_u5h7n"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorCenter"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_i828f"]
+script = ExtResource("18_i828f")
+movement_type = "Glide"
+target_anchor_name = "AnchorRightBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_n7y4l"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorRightBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_xwbfi"]
+script = ExtResource("18_i828f")
+movement_type = "Glide"
+target_anchor_name = "AnchorMidRight"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_fhdij"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorRightTop"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_5425a"]
+script = ExtResource("18_i828f")
+movement_type = "Glide"
+target_anchor_name = "AnchorLeftBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_2usp3"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorLeftBottom"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_hsayn"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorRightTop"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_uigaw"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorMidLeft"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="Resource" id="Resource_jt2qr"]
+script = ExtResource("18_i828f")
+movement_type = "Teleport"
+target_anchor_name = "AnchorMidLeft"
+metadata/_custom_type_script = "uid://wl3phbnmfy8t"
+
+[sub_resource type="LabelSettings" id="LabelSettings_2j1xo"]
+font_size = 36
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 6
+shadow_color = Color(1, 0.34902, 0.756863, 0.443137)
+shadow_offset = Vector2(0, 1)
+
+[node name="CelestialPrimatesDomain" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -2
+anchors_preset = -1
+anchor_right = 0.149
+anchor_bottom = 0.136
+offset_left = -1070.0
+offset_top = -857.0
+offset_right = 1074.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_pcadl")
+stretch_mode = 6
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(-283, 87)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 77.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 200)
+shape = SubResource("RectangleShape2D_0amvw")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-816, -277)
+shape = SubResource("RectangleShape2D_2j1xo")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(1024, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(-208, -277)
+shape = SubResource("RectangleShape2D_2j1xo")
+
+[node name="CelestialPrimate" parent="." instance=ExtResource("15_omux8")]
+position = Vector2(1, -804)
+motion_mode = 1
+lightning_bolt = ExtResource("14_rpagb")
+movement_patterns = Array[Resource]([ExtResource("16_dl20d"), ExtResource("17_i828f")])
+
+[node name="BossMarkers" type="Node2D" parent="."]
+position = Vector2(0, 77.25)
+
+[node name="AnchorCenter" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(0, -117.25)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_dl20d"), SubResource("Resource_xlk7u")])
+
+[node name="AnchorMidLeft" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(-125, -35)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_dl20d"), SubResource("Resource_fy50r")])
+
+[node name="AnchorMidRight" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(130, -1)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_dl20d")])
+
+[node name="AnchorLeftTop" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(-387, -142)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_l32dp"), SubResource("Resource_df2hd"), SubResource("Resource_j1pyc")])
+
+[node name="AnchorRightTop" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(351, -144)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_jfovg"), SubResource("Resource_2j1xo"), SubResource("Resource_u5h7n")])
+
+[node name="AnchorLeftBottom" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(-387, 36)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_i828f"), SubResource("Resource_n7y4l"), SubResource("Resource_xwbfi"), SubResource("Resource_fhdij")])
+
+[node name="AnchorRightBottom" type="Marker2D" parent="BossMarkers" groups=["boss_anchor"]]
+position = Vector2(351, 34)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_5425a"), SubResource("Resource_2usp3"), SubResource("Resource_hsayn"), SubResource("Resource_uigaw")])
+
+[node name="ChaosCrushAnchor" type="Marker2D" parent="." groups=["MCE_anchor"]]
+position = Vector2(0, -192)
+script = ExtResource("17_dl20d")
+transitions = Array[ExtResource("18_i828f")]([SubResource("Resource_jt2qr")])
+
+[node name="CameraSettings" type="Node2D" parent="."]
+script = ExtResource("8_2j1xo")
+zoom = Vector2(1.25, 1.25)
+
+[node name="BossLabel" type="Label" parent="." groups=["boss_label"]]
+modulate = Color(1, 1, 1, 0)
+offset_left = -208.0
+offset_top = -110.0
+offset_right = 209.0
+offset_bottom = -60.0
+text = "THE CELESTIAL PRIMATE"
+label_settings = SubResource("LabelSettings_2j1xo")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwfq3ag52nut8"]
+
+[ext_resource type="Texture2D" uid="uid://duxb511aieks2" path="res://sprites/stages/wizards_tower.png" id="1_saylv"]
+[ext_resource type="Script" uid="uid://blmds36hs5ur" path="res://scenes/levels/CameraSettings.gd" id="2_r503t"]
+[ext_resource type="PackedScene" uid="uid://praiojjndfgy" path="res://ui/world_objects/spell_swap/SpellSwapStation.tscn" id="3_saylv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mefbe"]
+size = Vector2(1924.5, 220)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r503t"]
+size = Vector2(38, 784.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saylv"]
+size = Vector2(26.5, 800)
+
+[node name="MyTower" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -432.0
+offset_top = -353.0
+offset_right = 1488.0
+offset_bottom = 727.0
+texture = ExtResource("1_saylv")
+stretch_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(367, 229)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-936, -589)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(951, 968)
+shape = SubResource("RectangleShape2D_mefbe")
+
+[node name="CameraSettings" type="Node2D" parent="."]
+script = ExtResource("2_r503t")
+zoom = Vector2(2.25, 2.25)
+offset = Vector2(0, 160)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-426, -109.75)
+shape = SubResource("RectangleShape2D_r503t")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(430.25, -123)
+shape = SubResource("RectangleShape2D_saylv")
+
+[node name="SpellSwapStation" parent="." instance=ExtResource("3_saylv")]
+position = Vector2(-331, 249)

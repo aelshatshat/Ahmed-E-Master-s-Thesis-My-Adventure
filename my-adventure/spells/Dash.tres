@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DodgeSpell" load_steps=2 format=3 uid="uid://dr2s8g5qhfswa"]
+
+[ext_resource type="Script" uid="uid://bytew1cal6hkq" path="res://DodgeSpell.gd" id="1_p1cv1"]
+
+[resource]
+script = ExtResource("1_p1cv1")
+cooldown_time = 0.5
+invulnerability_time = 0.4
+dodge_time = 0.3
+dodge_velocity = Vector2(600, 0)
+metadata/_custom_type_script = "uid://bytew1cal6hkq"

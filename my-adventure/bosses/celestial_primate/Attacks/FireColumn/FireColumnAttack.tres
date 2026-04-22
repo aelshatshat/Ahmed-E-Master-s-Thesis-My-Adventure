@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FireColumnAttack" load_steps=3 format=3 uid="uid://dprbewonfk6m3"]
+
+[ext_resource type="PackedScene" uid="uid://80satmi718o0" path="res://bosses/celestial_primate/Attacks/FireColumn/FireColumnEffect.tscn" id="1_y13km"]
+[ext_resource type="Script" uid="uid://p43uprqc8n5x" path="res://bosses/celestial_primate/Attacks/FireColumn/FireColumnAttack.gd" id="2_eqwje"]
+
+[resource]
+script = ExtResource("2_eqwje")
+fire_column_scene = ExtResource("1_y13km")
+count = 5
+spacing = 200.0
+randomize_positions = false
+telegraph_time = 3.0
+metadata/_custom_type_script = "uid://p43uprqc8n5x"

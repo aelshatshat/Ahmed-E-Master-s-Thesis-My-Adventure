@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=3 uid="uid://cd1odr0m83b4m"]
+
+[ext_resource type="Texture2D" uid="uid://c8mmuih08ghpm" path="res://sprites/spells_and_effects/CastEffect.png" id="1_j7m3y"]
+[ext_resource type="Script" uid="uid://cai6kjeuy5ugx" path="res://spells/CastEffect.gd" id="1_u35an"]
+[ext_resource type="Texture2D" uid="uid://bbbprigyy5e6r" path="res://sprites/spells_and_effects/CastEffectNoMana.png" id="3_e584v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u35an"]
+atlas = ExtResource("1_j7m3y")
+region = Rect2(0, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e584v"]
+atlas = ExtResource("1_j7m3y")
+region = Rect2(50, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ayws"]
+atlas = ExtResource("1_j7m3y")
+region = Rect2(100, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqjgx"]
+atlas = ExtResource("3_e584v")
+region = Rect2(0, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ibi"]
+atlas = ExtResource("3_e584v")
+region = Rect2(50, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwsb3"]
+atlas = ExtResource("3_e584v")
+region = Rect2(100, 0, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sr3e"]
+atlas = ExtResource("3_e584v")
+region = Rect2(0, 59, 50, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbfnn"]
+atlas = ExtResource("3_e584v")
+region = Rect2(50, 59, 50, 59)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqjgx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u35an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e584v")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7ayws")
+}],
+"loop": true,
+"name": &"incantation",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u35an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e584v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ayws")
+}],
+"loop": false,
+"name": &"instant",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqjgx")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_j7ibi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwsb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sr3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbfnn")
+}],
+"loop": false,
+"name": &"no_mana",
+"speed": 9.0
+}]
+
+[node name="CastEffect" type="Node2D"]
+script = ExtResource("1_u35an")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 6
+sprite_frames = SubResource("SpriteFrames_nqjgx")
+animation = &"no_mana"
+frame = 4
+frame_progress = 1.0

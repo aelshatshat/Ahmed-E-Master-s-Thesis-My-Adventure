@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://cb7ukfgs638dj"]
+
+[ext_resource type="Script" uid="uid://o1i5eh10e0sl" path="res://spells/spellTemplates/Spell.gd" id="1_8o8d1"]
+
+[resource]
+script = ExtResource("1_8o8d1")
+name = "Base Spell"
+mana_cost = 10.0
+cooldown = 1.0
+metadata/_custom_type_script = "uid://o1i5eh10e0sl"

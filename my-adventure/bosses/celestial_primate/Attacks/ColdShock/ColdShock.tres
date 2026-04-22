@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ColdShock" load_steps=3 format=3 uid="uid://s5hpwtd32s26"]
+
+[ext_resource type="PackedScene" uid="uid://cq77kkrjhtyi8" path="res://bosses/celestial_primate/Attacks/ColdShock/ColdShockEffect.tscn" id="1_6msyn"]
+[ext_resource type="Script" uid="uid://kru732c7kyos" path="res://bosses/celestial_primate/Attacks/ColdShock/ColdShock.gd" id="1_fbxbd"]
+
+[resource]
+script = ExtResource("1_fbxbd")
+cold_shock_scene = ExtResource("1_6msyn")
+radius = 120.0
+delay_before_freeze = 1.2
+damage = 35
+slow_duration = 1.5
+metadata/_custom_type_script = "uid://kru732c7kyos"

@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://brl3wowjq3ccj"]
+
+[ext_resource type="Script" uid="uid://dicf6k5kihlx" path="res://scenes/GameWorld.gd" id="1_46q1d"]
+[ext_resource type="PackedScene" uid="uid://b13io3t4sv2ci" path="res://ui/HUD.tscn" id="2_q4kc4"]
+[ext_resource type="PackedScene" uid="uid://be03acy8rwfts" path="res://ui/GameOverScreen.tscn" id="3_w60cb"]
+[ext_resource type="PackedScene" uid="uid://dfrd1dpybdu03" path="res://ui/BossHealthBar.tscn" id="4_xbhvy"]
+[ext_resource type="PackedScene" uid="uid://j5g36cajcwfn" path="res://ui/PauseMenu.tscn" id="4_yms0u"]
+[ext_resource type="PackedScene" uid="uid://c50rvi2vfboph" path="res://Player.tscn" id="5_tuu8v"]
+[ext_resource type="PackedScene" uid="uid://cv6cyagseycrw" path="res://scenes/cutscenes/PrimateEndingCutscene.tscn" id="7_g8ckf"]
+[ext_resource type="Script" uid="uid://b0dg3vp4vwbqt" path="res://scenes/levels/CutsceneController.gd" id="13_4ta1d"]
+
+[node name="GameWorld" type="Node2D" groups=["game_world"]]
+script = ExtResource("1_46q1d")
+player_scene = ExtResource("5_tuu8v")
+hud_scene = ExtResource("2_q4kc4")
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_yms0u")]
+layer = 101
+
+[node name="GameOverScreen" parent="." instance=ExtResource("3_w60cb")]
+visible = false
+
+[node name="BossHealthBar" parent="." groups=["boss_healthbar"] instance=ExtResource("4_xbhvy")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -42.995)
+scale = Vector2(1.25, 1.25)
+zoom = Vector2(0.505, 0.505)
+
+[node name="StageBackground" type="CanvasLayer" parent="."]
+layer = -5
+
+[node name="CutsceneController" type="Node" parent="."]
+script = ExtResource("13_4ta1d")
+primate_ending_scene = ExtResource("7_g8ckf")
+
+[node name="LevelContainer" type="Node2D" parent="."]

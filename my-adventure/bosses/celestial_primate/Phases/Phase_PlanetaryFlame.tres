@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BossPhase" load_steps=3 format=3 uid="uid://b6xcou5tdj4uc"]
+
+[ext_resource type="Script" uid="uid://cjhpky1jihpby" path="res://bosses/celestial_primate/Shared/BossPhase.gd" id="1_dxmju"]
+[ext_resource type="Script" uid="uid://u5nf4j5j0xmd" path="res://bosses/celestial_primate/Attacks/MeteorSwarm/MeteorSwarm.gd" id="1_xobdp"]
+
+[resource]
+script = ExtResource("1_dxmju")
+phase_name = "Planetary Flame"
+min_health_threshold = 34
+attack_patterns = Array[Resource]([ExtResource("1_xobdp")])
+metadata/_custom_type_script = "uid://cjhpky1jihpby"

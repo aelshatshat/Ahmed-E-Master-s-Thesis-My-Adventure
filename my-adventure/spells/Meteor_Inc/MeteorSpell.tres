@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InstantSpell" load_steps=3 format=3 uid="uid://blfbq7j7uviwt"]
+
+[ext_resource type="Script" uid="uid://c34o1w1r1n3il" path="res://spells/spellTemplates/IncantationSpell.gd" id="1_gweve"]
+[ext_resource type="PackedScene" uid="uid://cfvkolxtm6vi0" path="res://spells/Meteor_Inc/MeteorSpell.tscn" id="1_jhbxb"]
+
+[resource]
+script = ExtResource("1_gweve")
+cast_time = 1.5
+name = "Meteor Swarm"
+mana_cost = 10.0
+cooldown = 1.0
+effect_scene = ExtResource("1_jhbxb")
+metadata/_custom_type_script = "uid://c34o1w1r1n3il"

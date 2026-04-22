@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ExplosionComboSpell" load_steps=8 format=3 uid="uid://bl6nd5swsjepb"]
+
+[ext_resource type="Script" uid="uid://c4kfhyyl6ykxt" path="res://spells/MagicExplosion_Com/ExplosionComboSpell.gd" id="1_5wmub"]
+[ext_resource type="PackedScene" uid="uid://svkasg6askrb" path="res://spells/MagicExplosion_Com/MagicExplosionSpell.tscn" id="1_knkxy"]
+[ext_resource type="PackedScene" uid="uid://c0iy6qdoxn511" path="res://spells/MagicExplosion_Com/BigMagicExplosionSpell_Upwards.tscn" id="1_r0hok"]
+[ext_resource type="PackedScene" uid="uid://dk46jq3y5galp" path="res://spells/MagicExplosion_Com/AreaMagicExplosionSpell.tscn" id="2_ovvtt"]
+[ext_resource type="PackedScene" uid="uid://dmywica65of0q" path="res://spells/MagicExplosion_Com/MagicExplosionSpell_Upwards.tscn" id="4_ju5pm"]
+[ext_resource type="Texture2D" uid="uid://15d5y1ltlr6p" path="res://sprites/hud/spell_hud_icons/medium_icon/Magic_Explosion_HUD.png" id="4_x2gyh"]
+[ext_resource type="Texture2D" uid="uid://bcwvabq2vmnnb" path="res://sprites/hud/spell_hud_icons/small_icon/MagicExplosionIcon.png" id="6_an065"]
+
+[resource]
+script = ExtResource("1_5wmub")
+explosion_scene = ExtResource("1_knkxy")
+explosion_scene2 = ExtResource("2_ovvtt")
+upward_explosion_scene = ExtResource("4_ju5pm")
+big_explosion_scene = ExtResource("1_r0hok")
+step_patterns = Array[String](["single", "forward", "upward", "big"])
+step_counts = Array[int]([1, 4, 4, 8])
+step_displacements = Array[int]([0, 10, -20, 5])
+vertical_step_displacements = Array[int]([0, 20, -20, 10])
+extra_damage = 10
+name = "Magic Explosion"
+mana_cost = 30.0
+cooldown = 0.0
+small_icon = ExtResource("6_an065")
+medium_icon = ExtResource("4_x2gyh")
+metadata/_custom_type_script = "uid://c4kfhyyl6ykxt"

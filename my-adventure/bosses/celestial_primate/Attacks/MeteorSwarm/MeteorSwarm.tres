@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MeteorSwarm" load_steps=3 format=3 uid="uid://dc6y5w2oyevk0"]
+
+[ext_resource type="PackedScene" uid="uid://cx55rp84eou13" path="res://bosses/celestial_primate/Attacks/MeteorSwarm/Meteor.tscn" id="1_xjdqb"]
+[ext_resource type="Script" uid="uid://u5nf4j5j0xmd" path="res://bosses/celestial_primate/Attacks/MeteorSwarm/MeteorSwarm.gd" id="2_847pp"]
+
+[resource]
+script = ExtResource("2_847pp")
+meteor_scene = ExtResource("1_xjdqb")
+count = 4
+spread_radius = 20.0
+metadata/_custom_type_script = "uid://u5nf4j5j0xmd"

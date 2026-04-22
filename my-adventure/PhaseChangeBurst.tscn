@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwx34l33f71hu"]
+
+[ext_resource type="Script" uid="uid://bpraviy0e2131" path="res://PhaseChangeBurst.gd" id="1_xsj5g"]
+[ext_resource type="Texture2D" uid="uid://dtuhlxixjcx5t" path="res://sprites/spells_and_effects/PhaseChange.png" id="2_8rurv"]
+
+[node name="PhaseChangeBurst" type="Node2D"]
+script = ExtResource("1_xsj5g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8rurv")

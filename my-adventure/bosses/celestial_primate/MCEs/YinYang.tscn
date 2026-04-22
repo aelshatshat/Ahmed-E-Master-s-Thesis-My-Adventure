@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhwbbynxin615"]
+
+[ext_resource type="Script" uid="uid://db35jm47v2kxw" path="res://bosses/celestial_primate/MCEs/YinYang.gd" id="1_53ekg"]
+[ext_resource type="Texture2D" uid="uid://ifyh7hmxqy13" path="res://sprites/spells_and_effects/YinYang.png" id="1_vlcf3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53ekg"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d8bc"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drxow"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsirs"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyktf"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbvbb"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7qx4"]
+atlas = ExtResource("1_vlcf3")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d8bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53ekg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d8bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drxow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsirs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyktf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbvbb")
+}],
+"loop": false,
+"name": &"break",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7qx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_53ekg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0d8bc")
+animation = &"break"
+frame = 3
+frame_progress = 1.0

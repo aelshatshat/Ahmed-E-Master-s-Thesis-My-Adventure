@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfrd1dpybdu03"]
+
+[ext_resource type="Script" uid="uid://cstbdyq40wrjg" path="res://ui/BossHealthBar.gd" id="1_a4fxe"]
+[ext_resource type="Texture2D" uid="uid://db40dajqxxgcq" path="res://sprites/hud/boss_ui/celestial_primate/Primate_Healthbar_Background.png" id="2_2l7kb"]
+[ext_resource type="Texture2D" uid="uid://crjp1rqine82l" path="res://sprites/hud/red_placeholder.png" id="3_caiw5"]
+[ext_resource type="Texture2D" uid="uid://dd6mdc4h00nag" path="res://sprites/hud/boss_ui/celestial_primate/Primate_Healthbar_Outline.png" id="4_7besh"]
+
+[sub_resource type="FontFile" id="FontFile_5qto5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_caiw5"]
+font = SubResource("FontFile_5qto5")
+font_size = 36
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0.679897, 0.209467, 0.405899, 0)
+shadow_offset = Vector2(-0.07, 1)
+
+[node name="BossHealthBar" type="CanvasLayer"]
+script = ExtResource("1_a4fxe")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.195
+offset_top = -55.3051
+offset_right = 30.195
+offset_bottom = -55.3051
+grow_vertical = 0
+pivot_offset = Vector2(2113.8, -860.695)
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = -981.0
+offset_right = 1798.0
+offset_bottom = -946.0
+max_value = 1000.0
+value = 1000.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_2l7kb")
+texture_progress = ExtResource("3_caiw5")
+
+[node name="BossName" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 92.805
+offset_top = -936.695
+offset_right = 356.805
+offset_bottom = -887.695
+text = "Celestial Primate"
+label_settings = SubResource("LabelSettings_caiw5")
+
+[node name="PrimateHealthbarOutline" type="Sprite2D" parent="Control"]
+position = Vector2(932.805, -970.695)
+scale = Vector2(1.05942, 1.05939)
+texture = ExtResource("4_7besh")

@@ -1,0 +1,140 @@
+[gd_scene load_steps=21 format=3 uid="uid://cfvkolxtm6vi0"]
+
+[ext_resource type="Script" uid="uid://dl4d4nremdr44" path="res://spells/Meteor_Inc/MeteorSpell.gd" id="1_getyv"]
+[ext_resource type="Texture2D" uid="uid://cvcjpe7te1a4b" path="res://sprites/spells_and_effects/MeteorShower.png" id="2_vxc4p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amra0"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4dmg"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f8fr"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t24p5"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jbrq"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(0, 64, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq001"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(80, 64, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15f8b"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(160, 64, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j8v2"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(240, 64, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rdy8"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(0, 128, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vww4s"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(80, 128, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv5hj"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(160, 128, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wggee"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(240, 128, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tngkf"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(0, 192, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoclb"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(80, 192, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rabnd"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(160, 192, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw0kg"]
+atlas = ExtResource("2_vxc4p")
+region = Rect2(240, 192, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkorq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amra0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4dmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f8fr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t24p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jbrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq001")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15f8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j8v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rdy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vww4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv5hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wggee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tngkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoclb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rabnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw0kg")
+}],
+"loop": false,
+"name": &"impact",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_getyv"]
+size = Vector2(37, 31)
+
+[node name="MeteorSpell" type="Node2D"]
+script = ExtResource("1_getyv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gkorq")
+animation = &"impact"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, 14.5)
+shape = SubResource("RectangleShape2D_getyv")

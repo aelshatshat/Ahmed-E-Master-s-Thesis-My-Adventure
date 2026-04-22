@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqq4pwppdlj84"]
+
+[ext_resource type="Script" uid="uid://bkjn7vcelis2u" path="res://test/ParticleSystem.gd" id="1_hc0g1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xpv1e"]
+radius = 70.3491
+
+[node name="SuctionEffect" type="Node2D"]
+script = ExtResource("1_hc0g1")
+
+[node name="DustParticles" type="GPUParticles2D" parent="."]
+
+[node name="SuctionZone" type="Area2D" parent="."]
+
+[node name="OuterCaptureShape" type="CollisionShape2D" parent="SuctionZone"]
+scale = Vector2(10.35, 10.35)
+shape = SubResource("CircleShape2D_xpv1e")

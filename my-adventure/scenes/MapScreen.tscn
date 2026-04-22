@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj5ww4xu8l2wn"]
+
+[ext_resource type="Script" uid="uid://dpcghysfoe017" path="res://scenes/MapScreen.gd" id="1_cehh4"]
+[ext_resource type="Texture2D" uid="uid://7ku2t538r1ed" path="res://sprites/world_map.png" id="2_3j17m"]
+[ext_resource type="Texture2D" uid="uid://cvayewyq5a70t" path="res://sprites/hud/menus/location_button_normal.png" id="3_ch6n0"]
+[ext_resource type="Texture2D" uid="uid://dnb308h2xe7oa" path="res://sprites/hud/menus/location_button_pressed.png" id="4_q7c8e"]
+[ext_resource type="Texture2D" uid="uid://c0w4ee3cq02qg" path="res://sprites/hud/menus/location_button_hover.png" id="5_04mgp"]
+[ext_resource type="Texture2D" uid="uid://bw4g6vyomgpul" path="res://sprites/hud/menus/location_button_disabled.png" id="6_njw4x"]
+
+[node name="MapScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cehh4")
+
+[node name="MapTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_3j17m")
+
+[node name="Locations" type="Node2D" parent="."]
+
+[node name="CelestialPrimatesDomain" type="TextureButton" parent="Locations"]
+offset_left = 1377.0
+offset_top = 542.0
+offset_right = 1419.0
+offset_bottom = 568.0
+texture_normal = ExtResource("3_ch6n0")
+texture_pressed = ExtResource("4_q7c8e")
+texture_hover = ExtResource("5_04mgp")
+texture_disabled = ExtResource("6_njw4x")
+
+[node name="MyTower" type="TextureButton" parent="Locations"]
+offset_left = 1043.0
+offset_top = 476.0
+offset_right = 1085.0
+offset_bottom = 502.0
+texture_normal = ExtResource("3_ch6n0")
+texture_pressed = ExtResource("4_q7c8e")
+texture_hover = ExtResource("5_04mgp")
+texture_disabled = ExtResource("6_njw4x")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 29.0
+offset_right = 28.0
+offset_bottom = 37.0
+text = "Back"

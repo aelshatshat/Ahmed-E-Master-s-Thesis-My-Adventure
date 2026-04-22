@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BossPhase" load_steps=3 format=3 uid="uid://c35no8no3an54"]
+
+[ext_resource type="Script" uid="uid://4c6qif0aht7i" path="res://bosses/celestial_primate/Attacks/LightningBolt/LightningBolt.gd" id="1_551un"]
+[ext_resource type="Script" uid="uid://cjhpky1jihpby" path="res://bosses/celestial_primate/Shared/BossPhase.gd" id="1_jrg2k"]
+
+[resource]
+script = ExtResource("1_jrg2k")
+phase_name = "Lightning Initiate"
+min_health_threshold = 67
+attack_patterns = Array[Resource]([ExtResource("1_551un")])
+metadata/_custom_type_script = "uid://cjhpky1jihpby"

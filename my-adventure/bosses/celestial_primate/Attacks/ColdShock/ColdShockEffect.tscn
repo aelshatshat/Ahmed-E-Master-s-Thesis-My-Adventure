@@ -1,0 +1,175 @@
+[gd_scene load_steps=21 format=3 uid="uid://cq77kkrjhtyi8"]
+
+[ext_resource type="Script" uid="uid://bni2folfx7qc0" path="res://bosses/celestial_primate/Attacks/ColdShock/ColdShockEffect.gd" id="1_wksgy"]
+[ext_resource type="Texture2D" uid="uid://dthdl58dr33em" path="res://sprites/spells_and_effects/IceShock.png" id="2_g8dqg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8rfqr"]
+radius = 54.0235
+height = 108.047
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63fvk"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(640, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my720"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(0, 320, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7gxd"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(160, 320, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktvnq"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(320, 320, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3x5v"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(480, 320, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di4rj"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(640, 320, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l27t"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04r0c"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jnoc"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_humv0"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54ovy"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aq7y"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(0, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_452pt"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(160, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rf80i"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(320, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jvgv"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(480, 160, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ukqt"]
+atlas = ExtResource("2_g8dqg")
+region = Rect2(0, 480, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1wf8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63fvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my720")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7gxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktvnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3x5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di4rj")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l27t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04r0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jnoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_humv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ovy")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_0aq7y")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_452pt")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_rf80i")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_2jvgv")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2ukqt")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2jvgv")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2ukqt")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2jvgv")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2ukqt")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2jvgv")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2ukqt")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2jvgv")
+}, {
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_2ukqt")
+}],
+"loop": false,
+"name": &"telegraph",
+"speed": 24.0
+}]
+
+[node name="ColdShockEffect" type="Area2D"]
+collision_layer = 9
+collision_mask = 5
+script = ExtResource("1_wksgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 2)
+rotation = 0.0106814
+shape = SubResource("CapsuleShape2D_8rfqr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k1wf8")
+animation = &"telegraph"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

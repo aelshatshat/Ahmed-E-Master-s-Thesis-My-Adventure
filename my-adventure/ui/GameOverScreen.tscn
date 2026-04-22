@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://be03acy8rwfts"]
+
+[ext_resource type="Script" uid="uid://dr5efjykgnilg" path="res://ui/GameOverScreen.gd" id="1_t4bxx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4fp0"]
+font_size = 60
+
+[node name="GameOverScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_t4bxx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.505882)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -361.0
+offset_right = 150.0
+offset_bottom = 376.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitMap" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "Quit to Map"
+
+[node name="QuitGame" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "Quit Game"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 823.0
+offset_top = 207.0
+offset_right = 1105.0
+offset_bottom = 290.0
+text = "YOU DIED"
+label_settings = SubResource("LabelSettings_o4fp0")

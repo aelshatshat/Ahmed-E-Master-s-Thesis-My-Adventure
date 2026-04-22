@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://praiojjndfgy"]
+
+[ext_resource type="Script" uid="uid://cmmyd3ceou3q5" path="res://ui/world_objects/spell_swap/SpellSwapStation.gd" id="1_3p0d6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v74h2"]
+size = Vector2(68, 46)
+
+[node name="SpellSwapStation" type="Area2D"]
+script = ExtResource("1_3p0d6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v74h2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press [E] to interact"

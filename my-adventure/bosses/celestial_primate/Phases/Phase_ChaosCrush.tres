@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BossPhase" load_steps=2 format=3 uid="uid://dycmj1tba0rfm"]
+
+[ext_resource type="Script" uid="uid://cjhpky1jihpby" path="res://bosses/celestial_primate/Shared/BossPhase.gd" id="1_3k2by"]
+
+[resource]
+script = ExtResource("1_3k2by")
+phase_name = "Chaos Crush"
+min_health_threshold = 10
+attack_patterns = Array[Resource]([])
+metadata/_custom_type_script = "uid://cjhpky1jihpby"

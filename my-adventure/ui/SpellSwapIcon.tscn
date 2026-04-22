@@ -1,0 +1,121 @@
+[gd_scene load_steps=18 format=3 uid="uid://pobfjvavajw2"]
+
+[ext_resource type="Script" uid="uid://dsi1cjkkgknb8" path="res://ui/SpellSwapIcon.gd" id="1_balc5"]
+[ext_resource type="Texture2D" uid="uid://cbrbfg4cvvukg" path="res://sprites/hud/ComboSpell_IconBackground.png" id="2_nov70"]
+[ext_resource type="Texture2D" uid="uid://mpxs8to115w" path="res://sprites/hud/IncantationSpell_IconBackground.png" id="3_a0mcw"]
+[ext_resource type="Texture2D" uid="uid://cxvdac6od7qux" path="res://sprites/hud/InstantSpell_IconBackground.png" id="4_qf2f8"]
+[ext_resource type="Texture2D" uid="uid://c25cjxshdiojf" path="res://sprites/hud/spell_hud_icons/small_icon/FireballIcon.png" id="5_itpoy"]
+[ext_resource type="Texture2D" uid="uid://bcwvabq2vmnnb" path="res://sprites/hud/spell_hud_icons/small_icon/MagicExplosionIcon.png" id="6_uwf8f"]
+[ext_resource type="Texture2D" uid="uid://v85wocvskp7k" path="res://sprites/hud/spell_hud_icons/small_icon/MagicMissilerackIcon.png" id="7_dp4ql"]
+[ext_resource type="Texture2D" uid="uid://bxo10rm0utdq8" path="res://sprites/hud/spell_hud_icons/small_icon/MeteorIcon.png" id="8_fc122"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up2yk"]
+atlas = ExtResource("2_nov70")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh3au"]
+atlas = ExtResource("3_a0mcw")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jqxa"]
+atlas = ExtResource("4_qf2f8")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hsln6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up2yk")
+}],
+"loop": true,
+"name": &"combo",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh3au")
+}],
+"loop": true,
+"name": &"incantation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jqxa")
+}],
+"loop": true,
+"name": &"instant",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jr5o"]
+atlas = ExtResource("5_itpoy")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amir4"]
+atlas = ExtResource("6_uwf8f")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6v2l"]
+atlas = ExtResource("7_dp4ql")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6i27"]
+atlas = ExtResource("8_fc122")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_341nr"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jr5o")
+}],
+"loop": true,
+"name": &"fireball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amir4")
+}],
+"loop": true,
+"name": &"magic explosion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6v2l")
+}],
+"loop": true,
+"name": &"magic missilerack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6i27")
+}],
+"loop": true,
+"name": &"meteor swarm",
+"speed": 5.0
+}]
+
+[node name="SpellSwapIcon" type="Node2D"]
+script = ExtResource("1_balc5")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hsln6")
+animation = &"combo"
+
+[node name="SubIcon" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_341nr")
+animation = &"magic missilerack"

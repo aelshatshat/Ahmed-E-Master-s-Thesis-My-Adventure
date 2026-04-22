@@ -1,0 +1,186 @@
+[gd_scene load_steps=14 format=3 uid="uid://cv6cyagseycrw"]
+
+[ext_resource type="Texture2D" uid="uid://cny05viy01vi0" path="res://sprites/cutscene_props/CelestialPrimateEndingCutscene-1.png" id="1_bjp6g"]
+[ext_resource type="Script" uid="uid://co0katryo707m" path="res://scenes/cutscenes/PrimateEndingCutscene.gd" id="1_n00ac"]
+[ext_resource type="Texture2D" uid="uid://mc3itj2qfq57" path="res://sprites/cutscene_props/CelestialPrimateEndingCutscene-2.png" id="2_n00ac"]
+[ext_resource type="Texture2D" uid="uid://k1fin3jhvw1v" path="res://sprites/cutscene_props/Orangubro Text.png" id="3_yvc8n"]
+
+[sub_resource type="Animation" id="Animation_jyfid"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OrangubroSide:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSide:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OrangubroText:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OrangubroText:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_ajhv6"]
+resource_name = "cutscene_flow"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OrangubroSide:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.96667, 4.63),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSide:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1.96667, 4.63333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OrangubroText:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 4.53333, 6.7, 8.1, 10.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OrangubroText:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.56667, 4.83333, 5.03333, 5.26667, 5.43333, 8.46667, 8.63333, 8.76667, 8.9, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i1k6c"]
+_data = {
+&"RESET": SubResource("Animation_jyfid"),
+&"cutscene_flow": SubResource("Animation_ajhv6")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5166k"]
+atlas = ExtResource("3_yvc8n")
+region = Rect2(0, 227, 1161, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u48tk"]
+atlas = ExtResource("3_yvc8n")
+region = Rect2(0, 454, 1161, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3i3k"]
+atlas = ExtResource("3_yvc8n")
+region = Rect2(0, 681, 1161, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6etu"]
+atlas = ExtResource("3_yvc8n")
+region = Rect2(0, 908, 1161, 227)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyed6"]
+atlas = ExtResource("3_yvc8n")
+region = Rect2(0, 0, 1161, 227)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dh2gm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5166k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u48tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3i3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6etu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyed6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n00ac")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i1k6c")
+}
+
+[node name="OrangubroSide" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(0, 43)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_bjp6g")
+offset = Vector2(0, -60)
+
+[node name="PlayerSide" type="Sprite2D" parent="."]
+visible = false
+z_index = 10
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_n00ac")
+
+[node name="OrangubroText" type="AnimatedSprite2D" parent="."]
+z_index = 11
+position = Vector2(171, 3)
+scale = Vector2(0.657489, 0.657489)
+sprite_frames = SubResource("SpriteFrames_dh2gm")
+frame = 4

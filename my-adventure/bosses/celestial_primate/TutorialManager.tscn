@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhq080eheets5"]
+
+[ext_resource type="Script" uid="uid://by866yodbyowu" path="res://bosses/celestial_primate/TutorialManager.gd" id="1_1sjig"]
+[ext_resource type="Texture2D" uid="uid://dxlk04tf5waqc" path="res://sprites/tutorial_props/attacking_text.png" id="2_atgi7"]
+[ext_resource type="Texture2D" uid="uid://c50vhxr46knxo" path="res://sprites/tutorial_props/ready_text.png" id="3_aovth"]
+[ext_resource type="Texture2D" uid="uid://ddyh7osbq6dtb" path="res://sprites/tutorial_props/movement_text.png" id="4_gby1s"]
+[ext_resource type="Texture2D" uid="uid://dpaac8p480ltj" path="res://sprites/tutorial_props/spellcasting_text.png" id="5_o6xsy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82ht6"]
+atlas = ExtResource("2_atgi7")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv424"]
+atlas = ExtResource("3_aovth")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rwge"]
+atlas = ExtResource("4_gby1s")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7qd4"]
+atlas = ExtResource("5_o6xsy")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epc6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82ht6")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv424")
+}],
+"loop": true,
+"name": &"finish",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rwge")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7qd4")
+}],
+"loop": true,
+"name": &"spellcast",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 6
+script = ExtResource("1_1sjig")
+tutorial_display_path = NodePath("Overlay/TutorialDisplay")
+
+[node name="Overlay" type="Control" parent="."]
+z_index = 7
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TutorialDisplay" type="AnimatedSprite2D" parent="Overlay"]
+z_index = 7
+position = Vector2(960, 494)
+sprite_frames = SubResource("SpriteFrames_epc6m")
+animation = &"attack"

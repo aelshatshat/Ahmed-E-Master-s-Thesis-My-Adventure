@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbe5y0i4eonyo"]
+
+[ext_resource type="Script" uid="uid://nic2rki8j2no" path="res://bosses/celestial_primate/Attacks/LightningBolt/LightningTelegraph.gd" id="1_ecsqt"]
+[ext_resource type="Texture2D" uid="uid://bh37on6fonxw2" path="res://sprites/spells_and_effects/LightningTelegraph.png" id="2_ecsqt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82s5x"]
+atlas = ExtResource("2_ecsqt")
+region = Rect2(64, 96, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pc30w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82s5x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="LightningTelegraph" type="Node2D"]
+script = ExtResource("1_ecsqt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pc30w")
+frame_progress = 0.614071

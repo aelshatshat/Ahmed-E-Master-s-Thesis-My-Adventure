@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://bo7imsxn5lg75"]
+
+[ext_resource type="Script" uid="uid://scsq45en8rgx" path="res://spells/MagicCircle.gd" id="1_r484r"]
+[ext_resource type="Texture2D" uid="uid://cmvld7bc3sm7t" path="res://sprites/spells_and_effects/MagicCircle.png" id="1_twyge"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r484r"]
+atlas = ExtResource("1_twyge")
+region = Rect2(80, 60, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3v0g"]
+atlas = ExtResource("1_twyge")
+region = Rect2(160, 60, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpdjj"]
+atlas = ExtResource("1_twyge")
+region = Rect2(240, 60, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ug846"]
+atlas = ExtResource("1_twyge")
+region = Rect2(0, 120, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kaks"]
+atlas = ExtResource("1_twyge")
+region = Rect2(80, 120, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldjqm"]
+atlas = ExtResource("1_twyge")
+region = Rect2(80, 0, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuvmf"]
+atlas = ExtResource("1_twyge")
+region = Rect2(160, 0, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpwgc"]
+atlas = ExtResource("1_twyge")
+region = Rect2(240, 0, 80, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6pmu"]
+atlas = ExtResource("1_twyge")
+region = Rect2(0, 60, 80, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf61o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r484r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3v0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpdjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug846")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kaks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldjqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuvmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpwgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6pmu")
+}],
+"loop": true,
+"name": &"channel",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r484r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3v0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpdjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ug846")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kaks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldjqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuvmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpwgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6pmu")
+}],
+"loop": false,
+"name": &"jump_cast",
+"speed": 14.0
+}]
+
+[node name="MagicCircle" type="Node2D"]
+script = ExtResource("1_r484r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_yf61o")
+animation = &"jump_cast"

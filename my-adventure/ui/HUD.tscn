@@ -1,0 +1,173 @@
+[gd_scene load_steps=13 format=3 uid="uid://b13io3t4sv2ci"]
+
+[ext_resource type="Script" uid="uid://c70mp2wyam03t" path="res://ui/HUD.gd" id="1_k5de2"]
+[ext_resource type="Texture2D" uid="uid://b4q3s76eojte1" path="res://sprites/hud/hud_sidebar.png" id="2_3q2by"]
+[ext_resource type="Texture2D" uid="uid://ybbn87qwl058" path="res://sprites/hud/grey_placeholder.png" id="2_ne771"]
+[ext_resource type="Texture2D" uid="uid://b3q4bpe62l8y5" path="res://sprites/hud/hud_background.png" id="2_pom5v"]
+[ext_resource type="Texture2D" uid="uid://bwl3ecie7lxgl" path="res://sprites/hud/hud_bar_outline.png" id="3_pfnlp"]
+[ext_resource type="Texture2D" uid="uid://crjp1rqine82l" path="res://sprites/hud/red_placeholder.png" id="3_xxqia"]
+[ext_resource type="Texture2D" uid="uid://15d5y1ltlr6p" path="res://sprites/hud/spell_hud_icons/medium_icon/Magic_Explosion_HUD.png" id="4_37bek"]
+[ext_resource type="Texture2D" uid="uid://enh58xj0xdia" path="res://sprites/hud/spell_hud_icons/medium_icon/Fireball_HUD.png" id="4_a33y5"]
+[ext_resource type="Texture2D" uid="uid://dx7mxhej2crw1" path="res://sprites/hud/blue_placeholder.png" id="4_gv1iq"]
+[ext_resource type="Texture2D" uid="uid://bhw634ercwt0d" path="res://sprites/hud/spell_hud_icons/medium_icon/Magic_Missilerack_HUD.png" id="5_28i83"]
+[ext_resource type="Texture2D" uid="uid://obhf3fvkljn7" path="res://sprites/hud/cooldown_indicator.png" id="7_37bek"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ne771"]
+
+[node name="HUD" type="CanvasLayer"]
+offset = Vector2(0, 36)
+transform = Transform2D(1, 0, 0, 1, 0, 36)
+script = ExtResource("1_k5de2")
+
+[node name="HUDSidebar" type="Sprite2D" parent="."]
+position = Vector2(402.28, 899)
+scale = Vector2(0.389954, 0.268382)
+texture = ExtResource("2_3q2by")
+
+[node name="GreyPlaceholder" type="Sprite2D" parent="HUDSidebar"]
+visible = false
+position = Vector2(519.858, 1.86304)
+scale = Vector2(2.11187, 2.68493)
+texture = ExtResource("2_ne771")
+
+[node name="GreyPlaceholder2" type="Sprite2D" parent="HUDSidebar"]
+visible = false
+position = Vector2(686.544, 1.86304)
+scale = Vector2(2.11187, 2.68493)
+texture = ExtResource("2_ne771")
+
+[node name="GreyPlaceholder3" type="Sprite2D" parent="HUDSidebar"]
+visible = false
+position = Vector2(853.23, 1.86304)
+scale = Vector2(2.11187, 2.68493)
+texture = ExtResource("2_ne771")
+
+[node name="SpellIcons" type="HBoxContainer" parent="HUDSidebar"]
+anchors_preset = -1
+anchor_left = 0.853
+anchor_top = 0.349
+anchor_right = 1.0
+anchor_bottom = 0.684
+offset_left = -1306.82
+offset_top = -286.732
+offset_right = -1305.66
+offset_bottom = -304.972
+scale = Vector2(1, 1.2)
+
+[node name="SpellSlot1" type="Control" parent="HUDSidebar/SpellIcons"]
+layout_mode = 2
+
+[node name="SpellIcon1" type="TextureRect" parent="HUDSidebar/SpellIcons/SpellSlot1"]
+layout_mode = 2
+offset_left = -504.0
+offset_right = -340.0
+offset_bottom = 164.0
+texture = ExtResource("4_a33y5")
+expand_mode = 2
+
+[node name="CooldownOverlay" type="TextureProgressBar" parent="HUDSidebar/SpellIcons/SpellSlot1/SpellIcon1"]
+layout_mode = 0
+offset_left = 504.0
+offset_right = 544.0
+offset_bottom = 40.0
+fill_mode = 8
+
+[node name="SpellSlot2" type="Control" parent="HUDSidebar/SpellIcons"]
+layout_mode = 2
+
+[node name="SpellIcon2" type="TextureRect" parent="HUDSidebar/SpellIcons/SpellSlot2"]
+layout_mode = 2
+offset_left = -340.0
+offset_right = -176.0
+offset_bottom = 164.0
+texture = ExtResource("4_37bek")
+expand_mode = 2
+
+[node name="CooldownOverlay" type="TextureProgressBar" parent="HUDSidebar/SpellIcons/SpellSlot2/SpellIcon2"]
+layout_mode = 0
+offset_left = 340.0
+offset_right = 380.0
+offset_bottom = 40.0
+fill_mode = 8
+
+[node name="SpellSlot3" type="Control" parent="HUDSidebar/SpellIcons"]
+layout_mode = 2
+
+[node name="SpellIcon3" type="TextureRect" parent="HUDSidebar/SpellIcons/SpellSlot3"]
+layout_mode = 2
+offset_left = -176.0
+offset_right = -12.0
+offset_bottom = 164.0
+texture = ExtResource("5_28i83")
+expand_mode = 2
+
+[node name="CooldownOverlay" type="TextureProgressBar" parent="HUDSidebar/SpellIcons/SpellSlot3/SpellIcon3"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -31.9998
+offset_right = 179.0
+offset_bottom = 192.0
+step = 0.1
+fill_mode = 4
+nine_patch_stretch = true
+texture_progress = ExtResource("7_37bek")
+
+[node name="HUDBackground" type="Sprite2D" parent="."]
+position = Vector2(310, 899)
+scale = Vector2(0.479167, 0.479167)
+texture = ExtResource("2_pom5v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.797
+anchor_right = 0.058
+anchor_bottom = 0.909
+offset_right = 4.0
+offset_bottom = -110.715
+scale = Vector2(6.545, 0.542)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HealthBar" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+value = 100.0
+texture_under = ExtResource("2_ne771")
+texture_progress = ExtResource("3_xxqia")
+
+[node name="ManaBar" type="TextureProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+value = 100.0
+texture_under = ExtResource("2_ne771")
+texture_progress = ExtResource("4_gv1iq")
+
+[node name="HealthBarOutline" type="Sprite2D" parent="."]
+position = Vector2(318.75, 879)
+scale = Vector2(0.525544, 0.488095)
+texture = ExtResource("3_pfnlp")
+
+[node name="ManaBarOutline" type="Sprite2D" parent="."]
+position = Vector2(318.75, 921)
+scale = Vector2(0.525544, 0.488095)
+texture = ExtResource("3_pfnlp")
+
+[node name="HealthValue" type="Label" parent="."]
+offset_left = 273.0
+offset_top = 867.0
+offset_right = 313.0
+offset_bottom = 890.0
+text = "Test"
+label_settings = SubResource("LabelSettings_ne771")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ManaValue" type="Label" parent="."]
+offset_left = 277.0
+offset_top = 909.0
+offset_right = 310.0
+offset_bottom = 932.0
+text = "Test"
+label_settings = SubResource("LabelSettings_ne771")
+horizontal_alignment = 1
+vertical_alignment = 1

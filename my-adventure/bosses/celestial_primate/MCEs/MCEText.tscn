@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4ow8mx0f6x1k"]
+
+[ext_resource type="Script" uid="uid://d13lidnic20wh" path="res://bosses/celestial_primate/MCEs/MCEText.gd" id="1_7j0ve"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_7j0ve")

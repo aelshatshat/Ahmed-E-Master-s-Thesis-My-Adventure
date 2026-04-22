@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://by1nxpxpinpkk"]
+
+[ext_resource type="Script" uid="uid://cbqs240uf88jy" path="res://ui/world_objects/spell_swap/SpellTitle.gd" id="1_tw0yd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tw0yd"]
+font_size = 10
+
+[node name="SpellTile" type="TextureButton"]
+custom_minimum_size = Vector2(40, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+script = ExtResource("1_tw0yd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_tw0yd")

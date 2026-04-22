@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GlideMovement" load_steps=2 format=3 uid="uid://b8blsgf1an8rv"]
+
+[ext_resource type="Script" uid="uid://pr3h5y6d56jk" path="res://bosses/celestial_primate/Shared/Movement/GlideMovement.gd" id="1_eqbpf"]
+
+[resource]
+script = ExtResource("1_eqbpf")
+glide_time = 1.0
+easing = 2
+transition = 1
+duration = 1.0
+metadata/_custom_type_script = "uid://pr3h5y6d56jk"

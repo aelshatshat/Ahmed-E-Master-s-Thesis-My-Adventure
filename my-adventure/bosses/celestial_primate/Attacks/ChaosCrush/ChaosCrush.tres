@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChaosCrush" load_steps=3 format=3 uid="uid://k8bm8spyxe1h"]
+
+[ext_resource type="Script" uid="uid://c1bmkoupr3qv3" path="res://bosses/celestial_primate/Attacks/ChaosCrush/ChaosCrush.gd" id="1_2disy"]
+[ext_resource type="PackedScene" uid="uid://cok1tknuhi5b" path="res://bosses/celestial_primate/Attacks/ChaosCrush/ChaosZone.tscn" id="1_pwjip"]
+
+[resource]
+script = ExtResource("1_2disy")
+chaos_zone_scene = ExtResource("1_pwjip")
+zone_count = 1
+arena_rect = Rect2(0, 0, 0, 0)
+metadata/_custom_type_script = "uid://c1bmkoupr3qv3"

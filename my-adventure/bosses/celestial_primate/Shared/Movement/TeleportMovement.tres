@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TeleportMovement" load_steps=2 format=3 uid="uid://c6n32hemiebis"]
+
+[ext_resource type="Script" uid="uid://c8hnkykxw30lf" path="res://bosses/celestial_primate/Shared/Movement/TeleportMovement.gd" id="1_o6t84"]
+
+[resource]
+script = ExtResource("1_o6t84")
+use_random_anchor = true
+specific_anchor_name = ""
+duration = 1.0
+metadata/_custom_type_script = "uid://c8hnkykxw30lf"

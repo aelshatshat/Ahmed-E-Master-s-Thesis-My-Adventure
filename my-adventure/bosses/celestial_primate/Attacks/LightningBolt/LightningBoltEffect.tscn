@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2y4aqairmh8x"]
+
+[ext_resource type="Script" uid="uid://b343bptphch4l" path="res://bosses/celestial_primate/Attacks/LightningBolt/LightningBoltEffect.gd" id="1_vl7ot"]
+
+[sub_resource type="Gradient" id="Gradient_3q0ua"]
+offsets = PackedFloat32Array(0, 0.293333, 0.78, 1)
+colors = PackedColorArray(0.415686, 0.992157, 1, 0, 0.175207, 0.876449, 1, 1, 0.176471, 0.87451, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rpa4g"]
+
+[node name="LightningBoltEffect" type="Area2D"]
+collision_layer = 9
+collision_mask = 5
+script = ExtResource("1_vl7ot")
+
+[node name="LightningLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 50, 0)
+width = 2.0
+default_color = Color(0.415592, 0.992541, 1, 1)
+gradient = SubResource("Gradient_3q0ua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 0)
+shape = SubResource("SegmentShape2D_rpa4g")
+
+[node name="Timer" type="Timer" parent="."]

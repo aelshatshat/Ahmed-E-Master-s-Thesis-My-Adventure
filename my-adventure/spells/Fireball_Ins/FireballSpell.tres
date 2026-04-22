@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InstantSpell" load_steps=5 format=3 uid="uid://bn6vf63qk0eny"]
+
+[ext_resource type="PackedScene" uid="uid://c27egb6gywk4b" path="res://spells/Fireball_Ins/FireballProjectile.tscn" id="1_ugmsr"]
+[ext_resource type="Texture2D" uid="uid://enh58xj0xdia" path="res://sprites/hud/spell_hud_icons/medium_icon/Fireball_HUD.png" id="2_6t0tm"]
+[ext_resource type="Script" uid="uid://bjkj3q8itv5kc" path="res://spells/spellTemplates/InstantSpell.gd" id="2_vqst8"]
+[ext_resource type="Texture2D" uid="uid://c25cjxshdiojf" path="res://sprites/hud/spell_hud_icons/small_icon/FireballIcon.png" id="4_iy8gj"]
+
+[resource]
+script = ExtResource("2_vqst8")
+name = "Fireball"
+mana_cost = 10.0
+cooldown = 0.2
+effect_scene = ExtResource("1_ugmsr")
+small_icon = ExtResource("4_iy8gj")
+medium_icon = ExtResource("2_6t0tm")
+metadata/_custom_type_script = "uid://bjkj3q8itv5kc"
